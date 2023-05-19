@@ -37,7 +37,7 @@ public class Item {
     }
     @Override
     public String toString() {
-        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.US);
+        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.GERMANY);
         String formattedPrice = currencyFormat.format(price);
         return  "Name: " + name +
                 ", Price: " + formattedPrice +

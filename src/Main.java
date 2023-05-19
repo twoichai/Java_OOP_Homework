@@ -16,16 +16,16 @@ public class Main {
 
     System.out.println(item1.toString());
     System.out.println(item2.toString());
-
+    System.out.println(item1.getName());
     item2.setName("cookie");
     System.out.println(item2.toString());
 
 
     // multiplication table task
-        int five = 5;
+        int value = 5;
         for(int i = 1; i <= 10; i ++){
-            int temp = five * i;
-            System.out.println("5 x "+ i + " = " + temp);
+            int temp = value * i;
+            System.out.println(value + " x "+ i + " = " + temp);
 
         }
         Scanner sc = new Scanner(System.in);
@@ -39,5 +39,9 @@ public class Main {
             for(int j = 0; j < width; j++) {
             System.out.print("@ ");
         }}
+        // triangle task
+        Triangle triangle1 = new Triangle(5, 4, 7);
+        double areaTriangle1 = triangle1.countArea();
+        System.out.println(areaTriangle1);
     }
 }
