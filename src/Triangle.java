@@ -1,46 +1,45 @@
 public class Triangle {
-    //todo: полям класса лучше всегда давать название, из которого понятно за что отвечает поле
-    // например sideA, sideB, sideC - это нужно в том числе для облегчения работы с твоим полями вне твоего класса и облегчения жизни другим разработчикам
-    private double a;
-    private double b;
-    private double c;
+   
+    private double sideA;
+    private double sideB;
+    private double sideC;
 
-    public double getA() {
-        return a;
+    public Triangle(int sideA, int sideB, int sideC){ 
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.sideC = sideC;
+
+    }
+    
+    public double getSideA() {
+        return sideA;
     }
 
-    public void setA(double a) {
-        this.a = a;
+    public void setSideA(double sideA) {
+        this.sideA = sideA;
     }
 
-    public double getB() {
-        return b;
+    public double getSideB() {
+        return sideB;
     }
 
-    public void setB(double b) {
-        this.b = b;
+    public void setSideB(double sideB) {
+        this.sideB = sideB;
     }
 
-    public double getC() {
-        return c;
+    public double getSideC() {
+        return sideC;
     }
 
-    public void setC(double c) {
-        this.c = c;
-    }
-
-    public Triangle(int a, int b, int c){ //todo: перенести конструктор
-        this.a = a;
-        this.b = b;
-        this.c = c;
-
+    public void setSideC(double sideC) {
+        this.sideC = sideC;
     }
 
     //todo: при наличии гэттэров и сэттэров в классе, обращаться к полям класса всегда лучше с их помощью
     // это более целостно обеспечивает выполнение одного из принципов ООП - инкапсуляция (твой вариант тоже возможен)
     public double countArea () {
-        double s =  (this.a + this.b + this.c) / 2;
-        return  (Math.sqrt(s * (s - a) * (s - b) * (s - c)));
+        double s =  (this.sideA + this.sideB + this.sideC) / 2;
+        return  (Math.sqrt(s * (s - getSideA()) * (s - getSideB()) * (s - getSideC())));
 
     }
 
