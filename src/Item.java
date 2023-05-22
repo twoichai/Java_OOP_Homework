@@ -6,11 +6,11 @@ public class Item {
     private double price;
     private double weight;
 
-    public Item(String name, int price, double weight){  
-       this.name = name;
-       this.price = price;
-       this.weight = weight;
-         
+    public Item(String name, int price, double weight) {
+        this.name = name;
+        this.price = price;
+        this.weight = weight;
+    }
     public String getName() {
         return name;
     }
@@ -35,7 +35,6 @@ public class Item {
         this.weight = weight;
     }
 
-    }
     @Override
     public String toString() {
         //todo: форматирование и доп. логику лучше выносить в отдельный метод. toString отвечает только за toString

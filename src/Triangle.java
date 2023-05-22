@@ -8,7 +8,6 @@ public class Triangle {
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
-
     }
     
     public double getSideA() {
@@ -35,8 +34,6 @@ public class Triangle {
         this.sideC = sideC;
     }
 
-    //todo: при наличии гэттэров и сэттэров в классе, обращаться к полям класса всегда лучше с их помощью
-    // это более целостно обеспечивает выполнение одного из принципов ООП - инкапсуляция (твой вариант тоже возможен)
     public double countArea () {
         double s =  (this.sideA + this.sideB + this.sideC) / 2;
         return  (Math.sqrt(s * (s - getSideA()) * (s - getSideB()) * (s - getSideC())));
