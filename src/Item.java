@@ -6,6 +6,11 @@ public class Item {
     private double price;
     private double weight;
 
+    public Item(String name, int price, double weight){  
+       this.name = name;
+       this.price = price;
+       this.weight = weight;
+         
     public String getName() {
         return name;
     }
@@ -30,10 +35,6 @@ public class Item {
         this.weight = weight;
     }
 
-    public Item(String name, int price, double weight){  //todo: конструктор обычно определяют сразу после полей
-        this.name = name;
-        this.price = price;
-        this.weight = weight;
     }
     @Override
     public String toString() {
