@@ -30,13 +30,15 @@ public class Item {
         this.weight = weight;
     }
 
-    public Item(String name, int price, double weight){
+    public Item(String name, int price, double weight){  //todo: конструктор обычно определяют сразу после полей
         this.name = name;
         this.price = price;
         this.weight = weight;
     }
     @Override
     public String toString() {
+        //todo: форматирование и доп. логику лучше выносить в отдельный метод. toString отвечает только за toString
+        // + метод .format() также может выбрасывать исключение (ArithmeticException), которое должно быть корректно обработано
         NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.GERMANY);
         String formattedPrice = currencyFormat.format(price);
         return  "Name: " + name +
